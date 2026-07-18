@@ -1,87 +1,111 @@
 # CraneGuard
 
-An IoT-based Smart Crane Anti-Collision and Safety Monitoring System developed using ESP32.
+An IoT-based Smart Crane Safety and Obstacle Detection System developed using the ESP32 microcontroller. CraneGuard improves operational safety by detecting nearby obstacles in real time and providing visual, audible, and mechanical alerts to help prevent crane collisions.
+
+> **Project Status:** Developed and tested using the Wokwi simulator.
+
+---
 
 ## Overview
 
-CraneGuard improves construction site safety by continuously monitoring nearby obstacles using ultrasonic sensors. When an object enters the danger zone, the system alerts the operator through LEDs, a buzzer, and automatically restricts crane movement using a servo mechanism.
+CraneGuard is designed to enhance construction site safety by continuously monitoring the surroundings of a crane. The system measures the distance to nearby objects using an ultrasonic sensor and warns the operator through LEDs, an OLED display, and a buzzer. A servo motor can also simulate automatic movement restriction when an obstacle enters the danger zone.
+
+---
 
 ## Features
 
 - Real-time obstacle detection
-- Three-level safety warning
-- OLED distance display
-- Visual LED indicators
-- Audible buzzer alerts
-- Automatic movement restriction
-- ESP32 based
-- Wokwi simulation support
+- Three-level safety indication
+- OLED display for live distance monitoring
+- LED status indicators
+- Audible buzzer warning
+- Servo-based safety response
+- ESP32 microcontroller
+- Fully simulated using Wokwi
 
-## Hardware
+---
+
+## Components Used
 
 - ESP32 Dev Module
 - HC-SR04 Ultrasonic Sensor
 - SSD1306 OLED Display
 - SG90 Servo Motor
 - LEDs
-- Buzzer
+- Resistors
+- DHT22 Sensor
 - Jumper Wires
+
+---
 
 ## Working Principle
 
-1. Ultrasonic sensor measures obstacle distance.
-2. ESP32 processes the readings.
-3. OLED continuously displays distance.
-4. LEDs indicate safe, caution and danger zones.
-5. Buzzer activates during danger.
-6. Servo restricts crane movement if obstacle is too close.
+1. The ultrasonic sensor continuously measures the distance to nearby objects.
+2. The ESP32 processes the sensor readings.
+3. The OLED displays the measured distance.
+4. LEDs indicate the safety level.
+5. The buzzer activates when an object enters the danger zone.
+6. The servo simulates restricting crane movement to prevent collisions.
 
-## Safety Zones
+---
+
+## Safety Levels
 
 | Distance | Status |
-|-----------|--------|
-| >100 cm | Safe |
+|----------|--------|
+| Greater than 100 cm | Safe |
 | 50–100 cm | Warning |
-| <50 cm | Danger |
+| Less than 50 cm | Danger |
 
-## Technologies Used
+---
 
-- ESP32
-- Arduino Framework
-- PlatformIO
-- Wokwi
-- C++
+## Circuit Diagram
 
-## Future Improvements
+![Circuit Diagram](diagram.png)
 
-- Multiple ultrasonic sensors
-- AI-based object detection
-- Load monitoring
-- Mobile app
-- Blynk IoT Dashboard
-- LoRa communication
-- Cloud logging
+---
 
-## Status 
-Developed and validated using the Wokwi simulator. No physical prototype has been built yet.
+## Software Used
+
+- Arduino IDE
+- Wokwi Simulator
+- GitHub
+
+---
 
 ## Repository Structure
 
 ```
-firmware/
-hardware/
-docs/
-simulation/
-assets/
+CraneGuard/
+│── CraneGuardX.ino
+│── README.md
+│── LICENSE
+└── diagram.png
 ```
+
+---
+
+##  Future Improvements
+
+- Multiple ultrasonic sensors
+- IoT dashboard for remote monitoring
+- Mobile application integration
+- Camera-based obstacle detection
+- Load monitoring system
+- GPS and GSM integration
+- Data logging and analytics
+
+---
 
 ## Author
 
 **Gayathri J Pisharady**
 
-Mechanical Engineering  
+Mechanical Engineering Student  
 Government Engineering College Palakkad
 
-## License
+---
 
-MIT License
+## 📄 License
+
+This project is licensed under the MIT License.

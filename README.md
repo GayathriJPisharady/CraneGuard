@@ -62,6 +62,8 @@ CraneGuard improves construction site safety by continuously monitoring nearby o
 - LoRa communication
 - Cloud logging
 
+#Status: Developed and validated using the Wokwi simulator. No physical prototype has been built yet.
+
 ## Repository Structure
 
 ```
